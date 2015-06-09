@@ -28,7 +28,7 @@ behave-django is tested on:
 
 Django 1.4.20, 1.5.12, 1.6.11, 1.7.7, 1.8
 
-Python 2.6, 2.7, 3.3, 3.4
+Python 2.7, 3.3, 3.4
 
 It should work on everything, basically.
 

@@ -1,6 +1,5 @@
 language: python
 python:
-  - "2.6"
   - "2.7"
   - "3.3"
   - "3.4"
@@ -11,7 +10,6 @@ env:
   - DJANGO=django==1.7.8
   - DJANGO=django==1.8.2
 install:
-  - if [[ $TRAVIS_PYTHON_VERSION == "2.6" ]]; then pip install importlib argparse; fi
   - pip install $DJANGO
   - pip install -r requirements.txt
 # Test behave_django with behave :)
@@ -19,10 +17,6 @@ install:
 script: python manage.py behave --tags=~@failing && python tests.py
 matrix:
   exclude:
-   - python: "2.6"
-     env: DJANGO=django==1.7.8
-   - python: "2.6"
-     env: DJANGO=django==1.8.2
    - python: "3.3"
      env: DJANGO=django==1.4.20
    - python: "3.4"
